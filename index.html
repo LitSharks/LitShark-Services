@@ -2,63 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>LitShark Services - Home</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LitShark Services</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <!-- Header / Nav -->
-  <header>
-    <nav class="navbar">
-      <div class="nav-left">
-        <a href="#" class="nav-link">Services</a>
-        <a href="#" class="nav-link">About</a>
-        <a href="#" class="nav-link">Contact</a>
-      </div>
-      <div class="nav-right">
-        <!-- Logo placeholder (text or image) -->
-        <span class="logo">LitShark Services</span>
-      </div>
-    </nav>
-  </header>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Services Section -->
-    <section class="services-section">
-      <h1>Services</h1>
-      <div class="service-grid">
-        <!-- Example service linking to snow-removal.html -->
-        <a href="snow-removal.html" class="service-box">
-          <h2>Snow Removal</h2>
-        </a>
-        <a href="#" class="service-box">
-          <h2>Window Cleaning</h2>
-        </a>
-        <a href="#" class="service-box">
-          <h2>Painting</h2>
-        </a>
-      </div>
-    </section>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- Irregular Work Section -->
-    <section class="irregular-section">
-      <h2>Irregular Work</h2>
-      <p class="availability-note">
-        Limited availability due to school and so on. However, I can always refer you to a full-time contractor, electrician, etc.
-      </p>
-      <div class="service-grid irregular-grid">
-        <div class="service-box"><h3>Home Finishing</h3></div>
-        <div class="service-box"><h3>Drywall/Flooring</h3></div>
-        <div class="service-box"><h3>Plumbing</h3></div>
-        <div class="service-box"><h3>Electrical</h3></div>
-        <div class="service-box"><h3>Knife Making</h3></div>
-      </div>
-    </section>
-  </main>
+  <!-- Main Container -->
+  <div class="container">
+    <h1>Our Services</h1>
 
-  <!-- Footer -->
+    <!-- Services Grid -->
+    <div class="services-grid">
+      <!-- Snow Removal Card -->
+      <a href="snow-removal.html" class="service-card">
+        <img src="images/snow-removal.jpg" alt="Snow Removal Service">
+        <div class="card-title">Snow Removal</div>
+      </a>
+
+      <!-- Painting Card -->
+      <a href="painting.html" class="service-card">
+        <img src="images/painting.jpg" alt="Painting Service">
+        <div class="card-title">Painting</div>
+      </a>
+
+      <!-- Duplicate these blocks for all other services you offer -->
+      <!-- Example placeholders:
+           Window Cleaning
+           Home Finishing
+           Drywall/Flooring
+           Plumbing
+           Electrical
+           Knife Making
+      -->
+    </div>
+  </div>
+
   <footer>
     <p>&copy; 2025 LitShark Services</p>
   </footer>
+
 </body>
 </html>
