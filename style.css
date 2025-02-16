@@ -1,108 +1,177 @@
 /* style.css */
 
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
+/* --------------------------------------------------------
+   FONT & COLOR BASICS
+   -------------------------------------------------------- */
+   html {
     box-sizing: border-box;
   }
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
   
-  /* Body styling */
   body {
-    font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
     line-height: 1.5;
-    background-color: #f4f4f4;
   }
   
-  /* Navigation bar */
+  /* --------------------------------------------------------
+     NAVIGATION
+     -------------------------------------------------------- */
   nav {
-    background-color: #333;
-    padding: 1rem;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky; /* stays at top on scroll */
+    top: 0;
+    width: 100%;
+    z-index: 999;
   }
+  
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+  }
+  
   nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
     gap: 2rem;
-  }
-  nav ul li {
-    display: inline;
-  }
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  nav ul li a:hover {
-    text-decoration: underline;
+    margin: 0;
+    padding: 0;
   }
   
-  /* Container for main content */
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  nav a:hover {
+    color: #666;
+  }
+  
+  nav a.active {
+    border-bottom: 2px solid #333;
+    padding-bottom: 3px;
+  }
+  
+  /* --------------------------------------------------------
+     CONTAINER / LAYOUT
+     -------------------------------------------------------- */
   .container {
     width: 90%;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 2rem auto;
   }
   
-  /* Heading styles */
-  h1, h2, h3 {
+  /* Headings & Subtitles */
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  /* --------------------------------------------------------
+     SERVICE CARDS
+     -------------------------------------------------------- */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .service-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+    border: 1px solid #eee;
+  }
+  
+  .service-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .service-card .card-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 1rem 0;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  }
+  
+  /* --------------------------------------------------------
+     SERVICE DETAIL PAGES
+     -------------------------------------------------------- */
+  .service-details {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-top: 2rem;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  }
+  
+  .service-details h2,
+  .service-details h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .service-details p {
     margin-bottom: 1rem;
   }
   
-  /* Service Cards Grid */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-  }
-  
-  /* Individual service card */
-  .service-card {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden; /* so the rounded corners show properly */
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s;
-    border: 1px solid #ddd;
-  }
-  .service-card:hover {
-    transform: scale(1.02);
-  }
-  .service-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-  }
-  .service-card .card-title {
-    padding: 1rem;
-    font-weight: bold;
-  }
-  
-  /* Footer spacing (if needed) */
-  footer {
-    text-align: center;
-    margin: 2rem 0;
-    color: #555;
-  }
-  
-  /* Example styling for a "details" page */
-  .service-details {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 2rem;
-    margin: 2rem 0;
-    border: 1px solid #ddd;
-  }
   .recent-work {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
   }
+  
   .recent-work img {
-    width: 45%;
+    width: 48%;
     border: 1px solid #ccc;
     border-radius: 5px;
+  }
+  
+  /* --------------------------------------------------------
+     FOOTER
+     -------------------------------------------------------- */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #999;
+    margin-top: 3rem;
   }
   

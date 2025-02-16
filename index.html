@@ -2,47 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LitShark Services</title>
-  <link rel="stylesheet" href="style.css"/>
+  <!-- Google Fonts: Montserrat (you can change if you prefer another) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Navigation -->
   <nav>
-    <ul>
-      <li><a href="index.html">Services</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <div class="nav-container">
+      <div class="logo">LitShark</div>
+      <ul>
+        <li><a href="index.html" class="active">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- Main Container -->
   <div class="container">
     <h1>Our Services</h1>
+    <p class="subtitle">
+      Professional, reliable, and friendly service for all your needs.
+    </p>
 
     <!-- Services Grid -->
     <div class="services-grid">
-      <!-- Snow Removal Card -->
+      <!-- Example Service Card: Snow Removal -->
       <a href="snow-removal.html" class="service-card">
-        <img src="images/snow-removal.jpg" alt="Snow Removal Service">
+        <img src="images/snow-removal.jpg" alt="Snow Removal Service" />
         <div class="card-title">Snow Removal</div>
       </a>
 
-      <!-- Painting Card -->
+      <!-- Example Service Card: Painting -->
       <a href="painting.html" class="service-card">
-        <img src="images/painting.jpg" alt="Painting Service">
+        <img src="images/painting.jpg" alt="Painting Service" />
         <div class="card-title">Painting</div>
       </a>
 
-      <!-- Duplicate these blocks for all other services you offer -->
-      <!-- Example placeholders:
-           Window Cleaning
-           Home Finishing
-           Drywall/Flooring
-           Plumbing
-           Electrical
-           Knife Making
+      <!-- Duplicate for more services (Window Cleaning, Plumbing, etc.) -->
+      <!--
+      <a href="window-cleaning.html" class="service-card">
+        <img src="images/window-cleaning.jpg" alt="Window Cleaning Service" />
+        <div class="card-title">Window Cleaning</div>
+      </a>
       -->
     </div>
   </div>
